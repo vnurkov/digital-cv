@@ -1,10 +1,10 @@
 # Education
 
-- (2009-2013) Mechanical Engineering, VIA University, Horsens - Denmark, Bachelor’s degree.
-- (2014-2018) Mechanical Engineering, Aarhus University - Denmark, Master's degree (attended).
-- (2016-2018) IT Networks Engineering,  BAAA School of technology, Aarhus - Denmark, AP degree.
+- (2009-2013) Mechanical Engineering, VIA University, Horsens - Denmark, Bachelor’s degree
+- (2014-2018) Mechanical Engineering, Aarhus University, Aarhus - Denmark, Master's degree (attended)
+- (2016-2018) IT Networks Engineering, BAAA School of technology, Aarhus - Denmark, AP degree
 
-# Experience
+# Professional experience
 
 ## (2018-present) System administrator, Combell Group, Soﬁa, Bulgaria
 
@@ -23,7 +23,7 @@ On my current position, as part of Combell’s Network Operations Center in So�
 
 - `net start WMSVC`
 - `%systemroot%\system32\inetsrv\appcmd recycle apppool /apppool.name:<NAME>`
-- `netsh http show ss`
+- `netsh http show ssl`
 - `Get-ChildItem -Recurse | Select-String "dummy" -List | Select Path`
 
 ### Migrating customer websites to our shared hosting platform
