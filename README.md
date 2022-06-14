@@ -15,6 +15,7 @@ On my current position, as part of Combellâ€™s Network Operations Center in Soï¬
 - `pvresize /dev/sdb; lvextend -l+100%FREE /dev/mapper/vg02-lv_var; resize2fs /dev/mapper/vg02-lv_var`
 - `nc -v -w 2 -z <IP> 22 80 443 3306`
 - `for file in /proc/*/status ; do awk '/VmSwap|Name/{printf $2 " " $3}END{ print ""}' $file; done | sort -k 2 -n -r | less`
+- `ps -o pid,user,%mem,command ax | sort -b -k3 -r`
 - `strace -p $(ps -ef |grep fpm | grep -v master | awk {'print $2'}| tr '\n' ' ' | xargs | sed 's/ / -p /g')`
 - `/usr/sbin/tcpdump -n -i any -s 0 -A tcp dst port 80`
 - `for x in $(strace_out); do echo "Deny from ${x}" >> htaccess; done`
@@ -41,10 +42,13 @@ do
 done
 ```
 
+#### asd
+
 ### Web server adminstration (including proxy and cache servers)
 
 ### MySQL and Elasticsearch
 
+- `find /var/mysqldata/ -name "cache*" -exec du -shx "{}" \; |grep -v K | sort -n -r`
 - `curl localhost:9200/_cluster/health`
 - `curl -XGET localhost:9200/_cluster/allocation/explain?pretty`
 - `curl -XGET localhost:9200/_cat/shards?h=index,shard,prirep,state,unassigned.reason| grep UNASSIGNED`
