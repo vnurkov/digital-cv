@@ -10,7 +10,7 @@
 
 ### (2018-present) System administrator, Combell Group, Soﬁa, Bulgaria
 
-On my current position, as part of Combell’s Network Operations Center in Soﬁa, I have gained experience in the following fields:
+On my current position as a systems admin, I have gained experience in managing cloud infrastructure using VMware vCenter and OpenStack virtualization platforms and further experience in handling task such as:
 
 #### Managing `.deb` boxes
 
@@ -19,8 +19,7 @@ On my current position, as part of Combell’s Network Operations Center in So�
 - `for file in /proc/*/status ; do awk '/VmSwap|Name/{printf $2 " " $3}END{ print ""}' $file; done | sort -k 2 -n -r | less`
 - `ps -o pid,user,%mem,command ax | sort -b -k3 -r`
 - `strace -p $(ps -ef |grep fpm | grep -v master | awk {'print $2'}| tr '\n' ' ' | xargs | sed 's/ / -p /g')`
-- `/usr/sbin/tcpdump -n -i any -s 0 -A tcp dst port 80`
-- `for x in $(strace_out); do echo "Deny from ${x}" >> htaccess; done`
+- `for x in $(cat iplist); do echo "Deny from ${x}" >> htaccess; done`
 
 #### Managing `.exe` boxes
 
@@ -29,9 +28,9 @@ On my current position, as part of Combell’s Network Operations Center in So�
 - `netsh http show ssl`
 - `Get-ChildItem -Recurse | Select-String "dummy" -List | Select Path`
 
-#### Migrating customer websites to our shared hosting platform
+#### Migrating customer websites to the shared hosting platform
 
-#### Managing cloud infrastructure using VMware vCenter
+- `rsync -av /var/www/html/ <IP>:/home/$USER/app`
 
 #### Writing shell and Python scripts for automating routine tasks
 
@@ -44,9 +43,12 @@ do
 done
 ```
 
-#### Web server adminstration (including proxy and cache servers)
+#### Managing `nginx` & `apache` servers (+proxy, +loadbalancer setups)
 
-#### MySQL and Elasticsearch
+- `cat /path/to/access.log | awk {'print $1'} | sort | uniq -c | sort -rn | head -n15`
+- `/usr/sbin/tcpdump -n -i any -s 0 -A tcp dst port 80`
+
+#### Managing `mysql` & `elasticsearch`
 
 - `find /var/mysqldata/ -name "cache*" -exec du -shx "{}" \; |grep -v K | sort -n -r`
 - `curl localhost:9200/_cluster/health`
@@ -67,8 +69,9 @@ Building a bare metal Ubuntu cloud running the OpenStack framework. The resultin
 
 ### (2017–2018) Freelance web development, Self-employed, Aarhus, Denmark
 
-As a freelancer I have been working with popular web technologies, such as RESTful APIs and MVC architectures. My primary choice of technologies was Python/Flask & Jinja2 tmplating. Tasks icluded:
+As a freelancer I have been working with popular web technologies, such as REST APIs and Source control (Git). My primary choice of technologies was Python/Flask & Jinja2 templating. Experience gained in:
 
+- Source control: `git add . ; git commit -m "MESSAGE"; git push -u origin <branch>`
 - Working with databases (MySQL);
 - Working with Python on the `import flask` framework;
 - Working with `import requests` python module;
