@@ -14,12 +14,10 @@ On my current position as a systems admin, I have gained experience in managing 
 
 #### Managing `.deb` boxes
 
-- `pvresize /dev/sdb; lvextend -l+100%FREE /dev/mapper/vg02-lv_var; resize2fs /dev/mapper/vg02-lv_var`
+- `pvresize /dev/sdX; lvextend -l+100%FREE /dev/mapper/<vol>; resize2fs /dev/mapper/<vol>`
 - `nc -v -w 2 -z <IP> 22 80 443 3306`
-- `for file in /proc/*/status ; do awk '/VmSwap|Name/{printf $2 " " $3}END{ print ""}' $file; done | sort -k 2 -n -r | less`
 - `ps -o pid,user,%mem,command ax | sort -b -k3 -r`
-- `strace -p $(ps -ef |grep fpm | grep -v master | awk {'print $2'}| tr '\n' ' ' | xargs | sed 's/ / -p /g')`
-- `for x in $(cat iplist); do echo "Deny from ${x}" >> htaccess; done`
+- `for x in $(cat iplist); do echo "Deny from ${x}" >> .htaccess; done`
 
 #### Managing `.exe` boxes
 
@@ -45,8 +43,8 @@ done
 
 #### Managing `nginx` & `apache` servers (+proxy, +loadbalancer setups)
 
-- `cat /path/to/access.log | awk {'print $1'} | sort | uniq -c | sort -rn | head -n15`
-- `/usr/sbin/tcpdump -n -i any -s 0 -A tcp dst port 80`
+- `cat access.log | awk {'print $1'} | sort | uniq -c | sort -rn | head -n15`
+- `tcpdump -n -i any -s 0 -A tcp dst port 80`
 
 #### Managing `mysql` & `elasticsearch`
 
@@ -72,7 +70,6 @@ Building a bare metal Ubuntu cloud running the OpenStack framework. The resultin
 As a freelancer I have been working with popular web technologies, such as REST APIs and Source control (Git). My primary choice of technologies was Python/Flask & Jinja2 templating. Experience gained in:
 
 - Source control: `git add . ; git commit -m "MESSAGE"; git push -u origin <branch>`
-- Working with databases (MySQL);
 - Working with Python on the `import flask` framework;
 - Working with `import requests` python module;
 - Working with `import json` python module;
