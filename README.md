@@ -46,7 +46,7 @@ done
 - `cat access.log | awk {'print $1'} | sort | uniq -c | sort -rn | head -n15`
 - `tcpdump -n -i any -s 0 -A tcp dst port 80`
 
-#### Managing `mysql` & `elasticsearch`
+#### Managing `mysql` servers & `elasticsearch` nodes
 
 - `find /var/mysqldata/ -name "cache*" -exec du -shx "{}" \; |grep -v K | sort -n -r`
 - `curl localhost:9200/_cluster/health`
@@ -57,10 +57,8 @@ done
 
 ### (2018–2018) Junior System administrator, Fleten.net A/S, Braedstrup, Denmark
 
-Building a bare metal Ubuntu cloud running the OpenStack framework. The resulting private cloud implemented a software deﬁned storage solution, tenant network isolation and a high-density LXC virtual server environmentBuild and test an OpenStack deployment. Experience with MAAS and Juju.
+Building a bare metal Ubuntu cloud running the OpenStack framework. The resulting system implemented a software deﬁned storage solution, tenant network isolation and a high-density LXC virtual server environment.
 
-- `sudo apt update; sudo apt upgrade -y; sudo apt install <package>`;
-- `sudo useradd $USER; sudo groupadd $GROUP; sudo chown $USER:$GROUP <filename>`;
 - `openstack server list --all-projects |grep $INSTANCE`
 - `openstack server show $VPSID`
 - `openstack console url show $VPSID --spice`
