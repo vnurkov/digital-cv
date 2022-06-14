@@ -16,15 +16,40 @@ On my current position, as part of Combell’s Network Operations Center in So�
 - `nc -v -w 2 -z <IP> 22 80 443 3306`
 - `for file in /proc/*/status ; do awk '/VmSwap|Name/{printf $2 " " $3}END{ print ""}' $file; done | sort -k 2 -n -r | less`
 - `strace -p $(ps -ef |grep fpm | grep -v master | awk {'print $2'}| tr '\n' ' ' | xargs | sed 's/ / -p /g')`
+- `/usr/sbin/tcpdump -n -i any -s 0 -A tcp dst port 80`
+- `for x in $(strace_out); do echo "Deny from ${x}" >> htaccess; done`
 
 ### Managing `.exe` boxes
 
-- Migrating customer websites to our shared hosting platform;
-- Managing cloud infrastructure using VMware vCenter;
-- Managing system level fs permissions and network interfaces;
-- Writing shell and Python scripts for automating routine tasks;
-- Web server adminstration (including proxy and cache servers);
-- Database server administration (including replication setups);
+- `net start WMSVC`
+- `%systemroot%\system32\inetsrv\appcmd recycle apppool /apppool.name:<NAME>`
+- `netsh http show ss`
+- `Get-ChildItem -Recurse | Select-String "dummy" -List | Select Path`
+
+### Migrating customer websites to our shared hosting platform
+
+### Managing cloud infrastructure using VMware vCenter
+
+### Writing shell and Python scripts for automating routine tasks
+
+```bash
+for i in $(cat traffic_out | awk {'print $1'} | sort | uniq |sort -rn | head -n7)
+do
+  ADDR=$i
+  iptables -I INPUT -s $ADDR -j DROP
+  echo "Block ALL INPUT from " $ADDR " net DROPPED."
+done
+```
+
+### Web server adminstration (including proxy and cache servers)
+
+### MySQL and Elasticsearch
+
+- `curl localhost:9200/_cluster/health`
+- `curl -XGET localhost:9200/_cluster/allocation/explain?pretty`
+- `curl -XGET localhost:9200/_cat/shards?h=index,shard,prirep,state,unassigned.reason| grep UNASSIGNED`
+- `curl -XPOST localhost:9200/_cluster/reroute?retry_failed=true`
+- `curl localhost:9200/_search?pretty`
 
 ## (2018–2018) Junior System administrator, Fleten.net A/S, Braedstrup, Denmark
 
@@ -32,8 +57,9 @@ Building a bare metal Ubuntu cloud running the OpenStack framework. The resultin
 
 - `sudo apt update; sudo apt upgrade -y; sudo apt install <package>`;
 - `sudo useradd $USER; sudo groupadd $GROUP; sudo chown $USER:$GROUP <filename>`;
-- Deploying and managing a new, internal IT ticket system;
-- Deploying OpenStack private cloud into production;
+- `openstack server list --all-projects |grep $INSTANCE`
+- `openstack server show $VPSID`
+- `openstack console url show $VPSID --spice`
 
 ## (2017–2018) Freelance web development, Self-employed, Aarhus, Denmark
 
