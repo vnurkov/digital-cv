@@ -4,11 +4,6 @@
 - (2014-2018) Mechanical Engineering, Aarhus University - Denmark, Master's degree (attended).
 - (2016-2018) IT Networks Engineering,  BAAA School of technology, Aarhus - Denmark, AP degree.
 
-# Degree projects
-
-- BAAA School of technology - Building an OpenStack private cloud deployment.
-- VIA University - Design, calculate and plan the production of an innovative electrical bicycle frame layout to accomodate a battery pack.
-
 # Experience
 
 ## (2018-present) System administrator, Combell Group, Soﬁa, Bulgaria
