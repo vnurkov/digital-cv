@@ -1,5 +1,7 @@
 # Curriculum vitae
 
+## Education
+
 - (2009-2013) Mechanical Engineering, VIA University, Horsens - Denmark, Bachelor’s degree
 - (2014-2018) Mechanical Engineering, Aarhus University, Aarhus - Denmark, Master's degree (attended)
 - (2016-2018) IT Networks Engineering, BAAA School of technology, Aarhus - Denmark, AP degree
