@@ -15,8 +15,15 @@
 
 On my current position, as part of Combell’s Network Operations Center in Soﬁa, I have gained experience in the following fields:
 
-- General windows server administration;
-- General linux server administration;
+### Managing `.deb` boxes
+
+- `pvresize /dev/sdb; lvextend -l+100%FREE /dev/mapper/vg02-lv_var; resize2fs /dev/mapper/vg02-lv_var`
+- `nc -v -w 2 -z <IP> 22 80 443 3306`
+- `for file in /proc/*/status ; do awk '/VmSwap|Name/{printf $2 " " $3}END{ print ""}' $file; done | sort -k 2 -n -r | less`
+- `strace -p $(ps -ef |grep fpm | grep -v master | awk {'print $2'}| tr '\n' ' ' | xargs | sed 's/ / -p /g')`
+
+### Managing `.exe` boxes
+
 - Migrating customer websites to our shared hosting platform;
 - Managing cloud infrastructure using VMware vCenter;
 - Managing system level fs permissions and network interfaces;
