@@ -72,3 +72,19 @@ As a freelancer I have been working with popular web technologies, such as REST 
 - Working with `import requests` python module;
 - Working with `import json` python module;
 - Working with `import sys, subprocess` python modules;
+
+## TechStack
+
+1. Scripting: Python, Bash
+2. Automation: Ansible
+3. Cloud: Docker, Kubernetes
+4. Server: NGINX, Apache, HAproxy
+5. Documentation: Markdown
+
+## Courses
+
+- Mathematics 1 Differential equations and matrix equations
+- Mathematics 2 Statistics and probability theory (Aarhus University)
+- Algorythms Optimization and statistical models (Aarhus University)
+- Fluid dynamics (Aarhus University)
+- Advanced Finite Elements (Aarhus University)
