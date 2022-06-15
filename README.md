@@ -14,16 +14,12 @@ On my current position as a systems admin, I have gained experience in managing 
 
 #### Managing `.deb` boxes
 
-- `pvresize /dev/sdX; lvextend -l+100%FREE /dev/mapper/<vol>; resize2fs /dev/mapper/<vol>`
 - `nc -v -w 2 -z <IP> 22 80 443 3306`
-- `ps -o pid,user,%mem,command ax | sort -b -k3 -r`
 - `for x in $(cat iplist); do echo "Deny from ${x}" >> .htaccess; done`
 
 #### Managing `.exe` boxes
 
-- `net start WMSVC`
 - `%systemroot%\system32\inetsrv\appcmd recycle apppool /apppool.name:<NAME>`
-- `netsh http show ssl`
 - `Get-ChildItem -Recurse | Select-String "dummy" -List | Select Path`
 
 #### Migrating customer websites to the shared hosting platform
@@ -51,9 +47,7 @@ done
 - `find /var/mysqldata/ -name "cache*" -exec du -shx "{}" \; |grep -v K | sort -n -r`
 - `curl localhost:9200/_cluster/health`
 - `curl -XGET localhost:9200/_cluster/allocation/explain?pretty`
-- `curl -XGET localhost:9200/_cat/shards?h=index,shard,prirep,state,unassigned.reason| grep UNASSIGNED`
 - `curl -XPOST localhost:9200/_cluster/reroute?retry_failed=true`
-- `curl localhost:9200/_search?pretty`
 
 ### (2018–2018) Junior System administrator, Fleten.net A/S, Braedstrup, Denmark
 
