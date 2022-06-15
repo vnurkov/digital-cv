@@ -10,9 +10,9 @@
 
 ### (2018-present) System administrator, Combell Group, Soﬁa, Bulgaria
 
-On my current position as a systems admin, I have gained experience in managing cloud infrastructure using VMware vCenter and OpenStack virtualization platforms and further experience in handling task such as:
+On my current position as a systems admin, I have gained experience in managing cloud infrastructure using VMware vCenter and OpenStack virtualization platforms and further experience in handling tasks such as:
 
-- Managing `.deb` boxes
+- #### Managing `.deb` boxes
 
 ```bash
 for x in $(cat iplist); do echo "Deny from ${x}" >> .htaccess; done
@@ -24,13 +24,13 @@ for x in $(cat iplist); do echo "Deny from ${x}" >> .htaccess; done
 %systemroot%\system32\inetsrv\appcmd recycle apppool /apppool.name:NAME
 ```
 
-- Migrating customer websites to the shared hosting platform
+- #### Migrating customer websites to the shared hosting platform
 
 ```bash
 rsync -av /var/www/html/ <IP>:/home/$USER/app
 ```
 
-- Writing shell and Python scripts for automating routine tasks
+- #### Writing shell and Python scripts for automating routine tasks
 
 ```bash
 for i in $(cat traffic_out | awk {'print $1'} | sort | uniq |sort -rn | head -n7)
@@ -41,13 +41,13 @@ do
 done
 ```
 
-- Managing `nginx` & `apache` servers (+proxy, +loadbalancer setups)
+- #### Managing `nginx` & `apache` servers (+proxy, +loadbalancer setups)
 
 ```bash
 tcpdump -n -i any -s 0 -A tcp dst port 80
 ```
 
-- Managing `mysql` servers & `elasticsearch` nodes
+- #### Managing `mysql` servers & `elasticsearch` nodes
 
 ```bash
 curl localhost:9200/_cluster/health
