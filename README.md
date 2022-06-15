@@ -14,19 +14,21 @@ On my current position as a systems admin, I have gained experience in managing 
 
 - Managing `.deb` boxes
 
--- `nc -v -w 2 -z <IP> 22 80 443 3306`
--- `for x in $(cat iplist); do echo "Deny from ${x}" >> .htaccess; done`
+```bash
+for x in $(cat iplist); do echo "Deny from ${x}" >> .htaccess; done
+```
 
-#### Managing `.exe` boxes
+- Managing `.exe` boxes
 
-- `%systemroot%\system32\inetsrv\appcmd recycle apppool /apppool.name:<NAME>`
-- `Get-ChildItem -Recurse | Select-String "dummy" -List | Select Path`
+```powershell
+%systemroot%\system32\inetsrv\appcmd recycle apppool /apppool.name:<NAME>
+```
 
-#### Migrating customer websites to the shared hosting platform
+- Migrating customer websites to the shared hosting platform
 
-- `rsync -av /var/www/html/ <IP>:/home/$USER/app`
+`rsync -av /var/www/html/ <IP>:/home/$USER/app`
 
-#### Writing shell and Python scripts for automating routine tasks
+- Writing shell and Python scripts for automating routine tasks
 
 ```bash
 for i in $(cat traffic_out | awk {'print $1'} | sort | uniq |sort -rn | head -n7)
@@ -37,17 +39,17 @@ do
 done
 ```
 
-#### Managing `nginx` & `apache` servers (+proxy, +loadbalancer setups)
+- Managing `nginx` & `apache` servers (+proxy, +loadbalancer setups)
 
-- `cat access.log | awk {'print $1'} | sort | uniq -c | sort -rn | head -n15`
-- `tcpdump -n -i any -s 0 -A tcp dst port 80`
+`tcpdump -n -i any -s 0 -A tcp dst port 80`
 
-#### Managing `mysql` servers & `elasticsearch` nodes
+- Managing `mysql` servers & `elasticsearch` nodes
 
-- `find /var/mysqldata/ -name "cache*" -exec du -shx "{}" \; |grep -v K | sort -n -r`
-- `curl localhost:9200/_cluster/health`
-- `curl -XGET localhost:9200/_cluster/allocation/explain?pretty`
-- `curl -XPOST localhost:9200/_cluster/reroute?retry_failed=true`
+```shell
+curl localhost:9200/_cluster/health
+curl -XGET localhost:9200/_cluster/allocation/explain?pretty
+curl -XPOST localhost:9200/_cluster/reroute?retry_failed=true
+```
 
 ### (2018–2018) Junior System administrator, Fleten.net A/S, Braedstrup, Denmark
 
