@@ -75,11 +75,11 @@ As a freelancer I have been working with popular web technologies, such as REST 
 
 ## TechStack
 
-1. Scripting: Python, Bash
-2. Automation: Ansible
-3. Cloud: Docker, Kubernetes
-4. Server: NGINX, Apache, HAproxy
-5. Documentation: Markdown
+- Scripting: Python, Bash
+- Automation: [Ansible](https://github.com/vnurkov/playbooks)
+- Cloud: Docker, Kubernetes
+- Server: NGINX, Apache, HAproxy
+- Documentation: Markdown
 
 ## Courses
 
