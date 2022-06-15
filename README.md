@@ -12,10 +12,10 @@
 
 On my current position as a systems admin, I have gained experience in managing cloud infrastructure using VMware vCenter and OpenStack virtualization platforms and further experience in handling task such as:
 
-#### Managing `.deb` boxes
+- Managing `.deb` boxes
 
-- `nc -v -w 2 -z <IP> 22 80 443 3306`
-- `for x in $(cat iplist); do echo "Deny from ${x}" >> .htaccess; done`
+-- `nc -v -w 2 -z <IP> 22 80 443 3306`
+-- `for x in $(cat iplist); do echo "Deny from ${x}" >> .htaccess; done`
 
 #### Managing `.exe` boxes
 
