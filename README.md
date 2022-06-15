@@ -26,7 +26,9 @@ for x in $(cat iplist); do echo "Deny from ${x}" >> .htaccess; done
 
 - Migrating customer websites to the shared hosting platform
 
-`rsync -av /var/www/html/ <IP>:/home/$USER/app`
+```bash
+rsync -av /var/www/html/ <IP>:/home/$USER/app
+```
 
 - Writing shell and Python scripts for automating routine tasks
 
@@ -41,11 +43,13 @@ done
 
 - Managing `nginx` & `apache` servers (+proxy, +loadbalancer setups)
 
-`tcpdump -n -i any -s 0 -A tcp dst port 80`
+```bash
+tcpdump -n -i any -s 0 -A tcp dst port 80
+```
 
 - Managing `mysql` servers & `elasticsearch` nodes
 
-```shell
+```bash
 curl localhost:9200/_cluster/health
 curl -XGET localhost:9200/_cluster/allocation/explain?pretty
 curl -XPOST localhost:9200/_cluster/reroute?retry_failed=true
