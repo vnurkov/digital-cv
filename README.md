@@ -36,11 +36,11 @@ On my current position as a systems admin, I have gained experience in managing 
 
 - #### Managing windows server virtual machines
 
-- Recycling stuck application pools:
+  - Recycling stuck application pools:
 
-```powershell
-%systemroot%\system32\inetsrv\appcmd recycle apppool /apppool.name:NAME
-```
+  ```powershell
+  %systemroot%\system32\inetsrv\appcmd recycle apppool /apppool.name:NAME
+  ```
 
 - #### Migrating customer web-sites to the Combell shared hosting platform
 
