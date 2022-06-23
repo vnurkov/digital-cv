@@ -89,6 +89,7 @@ As a freelancer I have been working with popular web technologies, such as REST 
 - Server: NGINX, Apache, HAproxy
 - Documentation: [Markdown](https://github.com/vnurkov/digital-cv)
 
+<!-- 
 ## Courses
 
 - Mathematics 1 Differential equations and matrix equations
@@ -96,3 +97,4 @@ As a freelancer I have been working with popular web technologies, such as REST 
 - Algorythms Optimization and statistical models (Aarhus University)
 - Fluid dynamics (Aarhus University)
 - Advanced Finite Elements (Aarhus University)
+-->
