@@ -12,21 +12,21 @@
 
 On my current position as a systems admin, I have gained experience in managing cloud infrastructure using VMware vCenter and OpenStack virtualization platforms and further experience in handling tasks such as:
 
-- Managing linux (debian/centos) virtual machines including `nginx` & `apache` servers, `mysql` databases and `elasticsearch` clusters
+- Managing linux (debian/centos) virtual machines including `nginx` & `apache` servers, `mysql` databases and `elasticsearch` clusters;
 
-  - Disallowing bad traffic to a webserver:
+  - Disallowing bad traffic to a website
 
   ```bash
   for x in $(cat iplist); do echo "Deny from ${x}" >> .htaccess; done
   ```
 
-  - Capturing live traffic on a web-proxy:
+  - Capturing live traffic on a webproxy
 
   ```bash
   tcpdump -n -i any -s 0 -A tcp dst port 80
   ```
 
-  - Debuging `elasticsearch` cluster health:
+  - Debuging `elasticsearch` cluster health
 
   ```bash
   curl localhost:9200/_cluster/health
@@ -34,25 +34,25 @@ On my current position as a systems admin, I have gained experience in managing 
   curl -XPOST localhost:9200/_cluster/reroute?retry_failed=true
   ```
 
-- Managing windows server virtual machines
+- Managing windows server virtual machines;
 
-  - Recycling stuck application pools:
+  - Recycling stuck application pools
 
   ```powershell
   %systemroot%\system32\inetsrv\appcmd recycle apppool /apppool.name:NAME
   ```
 
-- Migrating customer web-sites to the Combell shared hosting platform
+- Migrating customer web-sites to the Combell shared hosting platform;
 
-  - Copying files to a remote server:
+  - Copying files to a remote server
 
   ```bash
   rsync -av /var/www/html/ <IP>:/home/$USER/app
   ```
 
-- Writing shell and Python scripts for automating routine tasks
+- Writing shell and Python scripts for automating routine tasks;
 
-  - Extracting IPs from a list and adding to INPUT chain in iptables:
+  - Extracting IPs from a list and adding to INPUT chain in iptables
 
   ```bash
   for i in $(cat traffic_out | awk {'print $1'} | sort | uniq |sort -rn | head -n7)
