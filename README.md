@@ -14,19 +14,19 @@ On my current position as a systems admin, I have gained experience in managing 
 
 - #### Managing linux (debian/centos) virtual machines including `nginx` & `apache` servers, `mysql` databases and `elasticsearch` clusters
 
--- Disallowing bad traffic to a webserver:
+- Disallowing bad traffic to a webserver:
 
 ```bash
 for x in $(cat iplist); do echo "Deny from ${x}" >> .htaccess; done
 ```
 
--- Capturing live traffic on a web-proxy:
+- Capturing live traffic on a web-proxy:
 
 ```bash
 tcpdump -n -i any -s 0 -A tcp dst port 80
 ```
 
--- Debuging `elasticsearch` cluster health:
+- Debuging `elasticsearch` cluster health:
 
 ```bash
 curl localhost:9200/_cluster/health
