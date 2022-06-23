@@ -12,19 +12,37 @@
 
 On my current position as a systems admin, I have gained experience in managing cloud infrastructure using VMware vCenter and OpenStack virtualization platforms and further experience in handling tasks such as:
 
-- #### Managing `.deb` boxes
+- #### Managing linux (debian/centos) virtual machines including `nginx` & `apache` servers, `mysql` databases and `elasticsearch` clusters
+
+- Disallowing bad traffic to a webserver:
 
 ```bash
 for x in $(cat iplist); do echo "Deny from ${x}" >> .htaccess; done
 ```
 
-- #### Managing `.exe` boxes
+- Capturing live traffic on a web-proxy:
+
+```bash
+tcpdump -n -i any -s 0 -A tcp dst port 80
+```
+
+- Debuging `elasticsearch` cluster health:
+
+```bash
+curl localhost:9200/_cluster/health
+curl -XGET localhost:9200/_cluster/allocation/explain?pretty
+curl -XPOST localhost:9200/_cluster/reroute?retry_failed=true
+```
+
+- #### Managing windows server virtual machines
+
+- Recycling stuck application pools:
 
 ```powershell
 %systemroot%\system32\inetsrv\appcmd recycle apppool /apppool.name:NAME
 ```
 
-- #### Migrating customer websites to the shared hosting platform
+- #### Migrating customer web-sites to the Combell shared hosting platform
 
 ```bash
 rsync -av /var/www/html/ <IP>:/home/$USER/app
@@ -39,20 +57,6 @@ do
   iptables -I INPUT -s $ADDR -j DROP
   echo "Block ALL INPUT from " $ADDR " net DROPPED."
 done
-```
-
-- #### Managing `nginx` & `apache` servers (+proxy, +loadbalancer setups)
-
-```bash
-tcpdump -n -i any -s 0 -A tcp dst port 80
-```
-
-- #### Managing `mysql` servers & `elasticsearch` nodes
-
-```bash
-curl localhost:9200/_cluster/health
-curl -XGET localhost:9200/_cluster/allocation/explain?pretty
-curl -XPOST localhost:9200/_cluster/reroute?retry_failed=true
 ```
 
 ### (2018–2018) Junior System administrator, Fleten.net A/S, Braedstrup, Denmark
