@@ -16,23 +16,23 @@ On my current position as a systems admin, I have gained experience in managing 
 
   - Disallowing bad traffic to a webserver:
 
-```bash
-for x in $(cat iplist); do echo "Deny from ${x}" >> .htaccess; done
-```
+  ```bash
+  for x in $(cat iplist); do echo "Deny from ${x}" >> .htaccess; done
+  ```
 
   - Capturing live traffic on a web-proxy:
 
-```bash
-tcpdump -n -i any -s 0 -A tcp dst port 80
-```
+  ```bash
+  tcpdump -n -i any -s 0 -A tcp dst port 80
+  ```
 
   - Debuging `elasticsearch` cluster health:
 
-```bash
-curl localhost:9200/_cluster/health
-curl -XGET localhost:9200/_cluster/allocation/explain?pretty
-curl -XPOST localhost:9200/_cluster/reroute?retry_failed=true
-```
+  ```bash
+  curl localhost:9200/_cluster/health
+  curl -XGET localhost:9200/_cluster/allocation/explain?pretty
+  curl -XPOST localhost:9200/_cluster/reroute?retry_failed=true
+  ```
 
 - #### Managing windows server virtual machines
 
