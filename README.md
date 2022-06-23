@@ -12,7 +12,7 @@
 
 On my current position as a systems admin, I have gained experience in managing cloud infrastructure using VMware vCenter and OpenStack virtualization platforms and further experience in handling tasks such as:
 
-- #### Managing linux (debian/centos) virtual machines including `nginx` & `apache` servers, `mysql` databases and `elasticsearch` clusters
+- Managing linux (debian/centos) virtual machines including `nginx` & `apache` servers, `mysql` databases and `elasticsearch` clusters
 
   - Disallowing bad traffic to a webserver:
 
@@ -34,7 +34,7 @@ On my current position as a systems admin, I have gained experience in managing 
   curl -XPOST localhost:9200/_cluster/reroute?retry_failed=true
   ```
 
-- #### Managing windows server virtual machines
+- Managing windows server virtual machines
 
   - Recycling stuck application pools:
 
@@ -42,22 +42,26 @@ On my current position as a systems admin, I have gained experience in managing 
   %systemroot%\system32\inetsrv\appcmd recycle apppool /apppool.name:NAME
   ```
 
-- #### Migrating customer web-sites to the Combell shared hosting platform
+- Migrating customer web-sites to the Combell shared hosting platform
 
-```bash
-rsync -av /var/www/html/ <IP>:/home/$USER/app
-```
+  - Copying files to a remote server:
 
-- #### Writing shell and Python scripts for automating routine tasks
+  ```bash
+  rsync -av /var/www/html/ <IP>:/home/$USER/app
+  ```
 
-```bash
-for i in $(cat traffic_out | awk {'print $1'} | sort | uniq |sort -rn | head -n7)
-do
-  ADDR=$i
-  iptables -I INPUT -s $ADDR -j DROP
-  echo "Block ALL INPUT from " $ADDR " net DROPPED."
-done
-```
+- Writing shell and Python scripts for automating routine tasks
+
+  - Extracting IPs from a list and adding to INPUT chain in iptables:
+
+  ```bash
+  for i in $(cat traffic_out | awk {'print $1'} | sort | uniq |sort -rn | head -n7)
+  do
+    ADDR=$i
+    iptables -I INPUT -s $ADDR -j DROP
+    echo "Block ALL INPUT from " $ADDR " net DROPPED."
+  done
+  ```
 
 ### (2018–2018) Junior System administrator, Fleten.net A/S, Braedstrup, Denmark
 
