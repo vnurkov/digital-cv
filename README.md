@@ -65,7 +65,7 @@ On my current position as a systems admin, I have gained experience in managing 
 
 ### (2018–2018) Junior System administrator, Fleten.net A/S, Braedstrup, Denmark
 
-Building a bare metal Ubuntu cloud running the OpenStack framework. The resulting system implemented a software deﬁned storage solution, tenant network isolation and a high-density LXC virtual server environment.
+Building a bare metal Ubuntu cloud running the OpenStack framework. The resulting system implemented a software defined storage solution, tenant network isolation and a high-density LXC virtual server environment.
 
 - `openstack server list --all-projects |grep $INSTANCE`
 - `openstack server show $VPSID`
