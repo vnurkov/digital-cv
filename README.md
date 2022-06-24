@@ -2,9 +2,9 @@
 
 ## Education
 
-- (2009-2013) Mechanical Engineering, VIA University, Horsens - Denmark, Bachelor’s degree
-- (2014-2018) Mechanical Engineering, Aarhus University, Aarhus - Denmark, Master's degree (attended)
-- (2016-2018) IT Networks Engineering, BAAA School of technology, Aarhus - Denmark, AP degree
+- (2009-2013) _Mechanical Engineering_, __VIA University, Horsens - Denmark__, Bachelor’s degree
+- (2014-2018) _Mechanical Engineering_, __Aarhus University, Aarhus - Denmark__, Master's degree (attended)
+- (2016-2018) _IT Networks Engineering_, __BAAA School of technology, Aarhus - Denmark__, AP degree
 
 ## Professional experience
 
