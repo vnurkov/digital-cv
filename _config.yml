@@ -1,10 +1,4 @@
 theme: jekyll-theme-dinky
 title: Ventsislav Nurkov
 description: Sysadmin
-# Site Author
-author:
-  name             : "Ventsislav Nurkov"
-  bio              : "Your biography for the left-hand sidebar"
-  location         : "Sofia, Bulgaria"
-  email            : "mail@me.com"
 
