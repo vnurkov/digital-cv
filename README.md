@@ -72,10 +72,8 @@ Building a bare metal Ubuntu cloud running the OpenStack framework for testing p
 As a freelancer I have been working with popular web technologies, such as REST APIs and Source control (Git). My primary choice of technologies was Python/Flask & Jinja2 templating. Experience gained in:
 
 - Source control: `git add . ; git commit -m "MESSAGE"; git push -u origin <branch>`
-- Working with Python on the `import flask` framework;
-- Working with `import requests` python module;
-- Working with `import json` python module;
-- Working with `import sys, subprocess` python modules;
+- Working with various Python modules such as: `flask, requests, json, sys,
+  subprocess`
 
 ## TechStack
 
