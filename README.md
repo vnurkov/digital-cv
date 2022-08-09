@@ -79,8 +79,7 @@ As a freelancer I have been working with popular web technologies, such as REST 
 
 - Scripting: [Python](https://github.com/vnurkov/useful-python-code), [Bash](https://github.com/vnurkov/misceleneous)
 - Automation: [Ansible](https://github.com/vnurkov/playbooks)
-- Cloud: _Docker_, _Kubernetes_
-- Server: _NGINX_, _Apache_, _HAproxy_
+- Cloud: _Docker_, _Kubernetes_, _OpenStack_
 - Documentation: [Markdown](https://github.com/vnurkov/digital-cv)
 
 <!-- 
